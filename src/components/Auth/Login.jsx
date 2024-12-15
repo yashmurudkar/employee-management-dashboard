@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 
 const Login = ({ handleLogin }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("admin@e.com");
+  const [password, setPassword] = useState("123");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Email: ", email);
     console.log("Password: ", password);
-    handleLogin(email,password)
+    handleLogin(email, password);
     setEmail("");
     setPassword("");
   };
 
   return (
-    <div className="flex items-center justify-center h-screen w-screen">
-      <div className="border-2 rounded-xl p-20 border-emerald-600">
+    <div className="flex flex-col items-center justify-center h-screen w-screen">
+      <h1 className="text-3xl">Employee Management Dashboard</h1>
+      <div className="border-2 rounded-xl p-20 border-emerald-600 mt-10">
         <form
           onSubmit={(e) => handleSubmit(e)}
           className="flex flex-col items-center justify-center"

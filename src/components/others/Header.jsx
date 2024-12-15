@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = ({ setUser, data }) => {
+const Header = ({ setUser, user }) => {
 
   const handleLogout = () => {
     localStorage.removeItem("loggedInUser", "");
@@ -11,7 +11,7 @@ const Header = ({ setUser, data }) => {
       <div>
         <h1 className="text-2xl font-medium">
           Hello, <br />{" "}
-          <span className="text-3xl font-semibold">{data.firstName} 👋</span>
+          <span className="text-3xl font-semibold">{user.firstName} 👋</span>
         </h1>
       </div>
       <button
